@@ -19,7 +19,7 @@ plotdata$Time <- strptime(paste(plotdata$Date, plotdata$Time), "%Y-%m-%d %H:%M:%
 # open a png file
 png("plot2.png", width=480, height=480)
 
-# plot a line chart to the screen
+# plot a line chart
 plot(plotdata$Time, plotdata$Global_active_power, ylab = "Global Active Power (kilowatts)", xlab= "", type="l")
 
 # close file

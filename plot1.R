@@ -19,7 +19,7 @@ plotdata$Time <- strptime(paste(plotdata$Date, plotdata$Time), "%Y-%m-%d %H:%M:%
 # open a png file
 png("plot1.png", width=480, height=480)
 
-# plot a histogram to the screen
+# plot a histogram
 hist(plotdata$Global_active_power, xlab = "Global Active Power (kilowatts)", ylab= "Frequency", main="Global Active Power", col="red")
 
 # close the file
