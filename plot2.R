@@ -16,11 +16,11 @@ plotdata <- plotdata[(plotdata$Date == "2007-02-01") | (plotdata$Date == "2007-0
 # convert time
 plotdata$Time <- strptime(paste(plotdata$Date, plotdata$Time), "%Y-%m-%d %H:%M:%OS")
 
+# open a png file
+png("plot2.png", width=480, height=480)
+
 # plot a line chart to the screen
 plot(plotdata$Time, plotdata$Global_active_power, ylab = "Global Active Power (kilowatts)", xlab= "", type="l")
 
-# copy plot to a file
-dev.copy(png, file = "plot2.png")
-
-# close the file
+# close file
 dev.off()
